@@ -1,0 +1,5 @@
+service\AccountServiceTest.class
+service\BankStatementServiceTest.class
+service\TransactionServiceTest.class
+repository\AccountRepositoryTest.class
+banking_system\simple_banking_app\AppTest.class
