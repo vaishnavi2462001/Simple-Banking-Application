@@ -4,15 +4,15 @@ import java.util.UUID;
 
 public class Customer {
 
-    public Customer(String name, String email, String phoneNumber) {
+	public Customer(String name, String email, String phoneNumber) {
 		this.name = name;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.customerId = generateCustomerId();
-        
+
 	}
 
-	private String name,email,phoneNumber,customerId;
+	private String name, email, phoneNumber, customerId;
 
 	public String getName() {
 		return name;
@@ -42,18 +42,14 @@ public class Customer {
 		return customerId;
 	}
 
-//	public void setCustomerId(String customerId) {
-//		this.customerId = customerId;
-//	}
 	public static String generateCustomerId() {
-        return UUID.randomUUID().toString();
-    }
+		return UUID.randomUUID().toString();
+	}
 
 	@Override
 	public String toString() {
 		return "Customer [Name = " + name + ", Email = " + email + ", PhoneNumber = " + phoneNumber + ", CustomerID = "
 				+ customerId + "]";
 	}
-
 
 }

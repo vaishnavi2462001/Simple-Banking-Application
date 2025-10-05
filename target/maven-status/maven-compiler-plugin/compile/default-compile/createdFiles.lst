@@ -1,6 +1,7 @@
 exception\AccountNotFoundException.class
 service\AccountService.class
 model\Transaction$TransactionType.class
+banking_system\simple_banking_app\App.class
 exception\DuplicateAccountException.class
 repository\TransactionRepository.class
 repository\AccountRepository.class

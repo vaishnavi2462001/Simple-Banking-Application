@@ -1,487 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="36" passed="31" failed="1" skipped="4">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-05T03:24:43 IST" name="Default suite" finished-at="2025-10-05T03:24:43 IST" duration-ms="201">
+  <suite started-at="2025-10-05T10:47:07 IST" name="Default suite" finished-at="2025-10-05T10:47:07 IST" duration-ms="110">
     <groups>
-      <group name="statement">
-        <method signature="BankStatementServiceTest.checkStatement()[pri:0, instance:service.BankStatementServiceTest@6c6cb480]" name="checkStatement" class="service.BankStatementServiceTest"/>
-      </group> <!-- statement -->
       <group name="transaction">
-        <method signature="TransactionServiceTest.checkDeposit()[pri:1, instance:service.TransactionServiceTest@3c46e67a]" name="checkDeposit" class="service.TransactionServiceTest"/>
-        <method signature="TransactionServiceTest.checktransfer()[pri:3, instance:service.TransactionServiceTest@3c46e67a]" name="checktransfer" class="service.TransactionServiceTest"/>
-        <method signature="AccountServiceTest.checkAccountNotFoundException()[pri:5, instance:service.AccountServiceTest@408d971b]" name="checkAccountNotFoundException" class="service.AccountServiceTest"/>
+        <method signature="TransactionServiceTest.checkDeposit()[pri:1, instance:service.TransactionServiceTest@131774fe]" name="checkDeposit" class="service.TransactionServiceTest"/>
       </group> <!-- transaction -->
-      <group name="account">
-        <method signature="AccountServiceTest.addAccount()[pri:1, instance:service.AccountServiceTest@408d971b]" name="addAccount" class="service.AccountServiceTest"/>
-        <method signature="AccountServiceTest.getBalance()[pri:2, instance:service.AccountServiceTest@408d971b]" name="getBalance" class="service.AccountServiceTest"/>
-        <method signature="AccountServiceTest.deleteAccount()[pri:3, instance:service.AccountServiceTest@408d971b]" name="deleteAccount" class="service.AccountServiceTest"/>
-        <method signature="AccountServiceTest.getAllAccounts()[pri:4, instance:service.AccountServiceTest@408d971b]" name="getAllAccounts" class="service.AccountServiceTest"/>
-      </group> <!-- account -->
       <group name="withdraw">
-        <method signature="TransactionServiceTest.checkwithdraw()[pri:2, instance:service.TransactionServiceTest@3c46e67a]" name="checkwithdraw" class="service.TransactionServiceTest"/>
+        <method signature="TransactionServiceTest.checkwithdraw()[pri:2, instance:service.TransactionServiceTest@131774fe]" name="checkwithdraw" class="service.TransactionServiceTest"/>
       </group> <!-- withdraw -->
     </groups>
-    <test started-at="2025-10-05T03:24:43 IST" name="Default test" finished-at="2025-10-05T03:24:43 IST" duration-ms="201">
-      <class name="service.BankStatementServiceTest">
-        <test-method signature="checkStatement()[pri:0, instance:service.BankStatementServiceTest@6c6cb480]" started-at="2025-10-05T03:24:43 IST" name="checkStatement" finished-at="2025-10-05T03:24:43 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatement -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.BankStatementServiceTest@6c6cb480]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.BankStatementServiceTest@6c6cb480]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-      </class> <!-- service.BankStatementServiceTest -->
+    <test started-at="2025-10-05T10:47:07 IST" name="Default test" finished-at="2025-10-05T10:47:07 IST" duration-ms="110">
       <class name="service.TransactionServiceTest">
-        <test-method is-config="true" signature="classSetup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="classSetup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="classSetup" finished-at="2025-10-05T10:47:07 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetup -->
-        <test-method signature="accountNotFound()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="accountNotFound" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <exception class="exception.AccountNotFoundException">
-            <message>
-              <![CDATA[Account not Found]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.AccountNotFoundException: Account not Found
-at service.TransactionService.deposit(TransactionService.java:29)
-at service.TransactionServiceTest.accountNotFound(TransactionServiceTest.java:81)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.AccountNotFoundException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountNotFound -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkAccountNotFoundException()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkAccountNotFoundException" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <exception class="exception.AccountNotFoundException">
-            <message>
-              <![CDATA[Destination account not found]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.AccountNotFoundException: Destination account not found
-at service.TransactionService.transfer(TransactionService.java:67)
-at service.TransactionServiceTest.checkAccountNotFoundException(TransactionServiceTest.java:106)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.AccountNotFoundException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAccountNotFoundException -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkInvalidAmountException()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkInvalidAmountException" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <exception class="exception.InvalidAmountException">
-            <message>
-              <![CDATA[Invalid Amount ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.InvalidAmountException: Invalid Amount 
-at service.TransactionService.deposit(TransactionService.java:31)
-at service.TransactionServiceTest.checkInvalidAmountException(TransactionServiceTest.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.InvalidAmountException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkInvalidAmountException -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkingInsufficientFundsException()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkingInsufficientFundsException" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <exception class="exception.InsufficientFundsException">
-            <message>
-              <![CDATA[Insufficient Funds]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.InsufficientFundsException: Insufficient Funds
-at service.TransactionService.withdraw(TransactionService.java:49)
-at service.TransactionServiceTest.checkingInsufficientFundsException(TransactionServiceTest.java:88)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.InsufficientFundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkingInsufficientFundsException -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkDeposit()[pri:1, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkDeposit" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method signature="checkDeposit()[pri:1, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkDeposit" finished-at="2025-10-05T10:47:07 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDeposit -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkSameAccountTransfer()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkSameAccountTransfer" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="1" status="PASS">
-          <exception class="exception.InvalidAmountException">
-            <message>
-              <![CDATA[Cannot transfer to the same account]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.InvalidAmountException: Cannot transfer to the same account
-at service.TransactionService.transfer(TransactionService.java:71)
-at service.TransactionServiceTest.checkSameAccountTransfer(TransactionServiceTest.java:183)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.InvalidAmountException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSameAccountTransfer -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkwithdraw()[pri:2, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdraw" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="0" status="PASS">
+        <test-method signature="checkwithdraw()[pri:2, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdraw" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdraw -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checktransfer()[pri:3, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransfer" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransfer -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[100.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[0.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[-50.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[999999999999999999.99]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[0.01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkdepositUsingDP(java.math.BigDecimal,boolean)[pri:4, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkdepositUsingDP" data-provider="depositamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkDeposit" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1E-10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkdepositUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="0" status="PASS">
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -493,15 +57,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[false]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="1" status="PASS">
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -513,23 +82,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[false]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="0" status="PASS">
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -541,19 +111,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[true]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -565,15 +144,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[true]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -582,68 +170,35 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="1">
               <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
                 <![CDATA[true]]>
               </value>
             </param>
           </params>
-          <exception class="exception.InsufficientFundsException">
-            <message>
-              <![CDATA[Insufficient Funds]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.InsufficientFundsException: Insufficient Funds
-at service.TransactionService.withdraw(TransactionService.java:49)
-at service.TransactionServiceTest.checkwithdrawUsingDP(TransactionServiceTest.java:135)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.InsufficientFundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean)[pri:5, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="0" status="PASS">
+        <test-method signature="checkwithdrawUsingDP(java.math.BigDecimal,boolean,boolean)[pri:5, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="checkwithdrawUsingDP" data-provider="withdrawamounts" finished-at="2025-10-05T10:47:07 IST" depends-on-methods="service.TransactionServiceTest.checkwithdraw" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[100.00]]>
+                <![CDATA[200.00]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[false]]>
               </value>
@@ -652,508 +207,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkwithdrawUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="setup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[100.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[0.01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[0.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[-50.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[999999999999999999.99]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checktransferUsingDP(java.math.BigDecimal,boolean)[pri:6, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="checktransferUsingDP" data-provider="transferamounts" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.TransactionServiceTest.checktransfer" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[50.00]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktransferUsingDP -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@3c46e67a]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.TransactionServiceTest@131774fe]" started-at="2025-10-05T10:47:07 IST" name="cleanup" finished-at="2025-10-05T10:47:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- service.TransactionServiceTest -->
-      <class name="repository.AccountRepositoryTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="8" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null
-at repository.AccountRepositoryTest.setup(AccountRepositoryTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkDeletion()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="checkDeletion" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null
-at repository.AccountRepositoryTest.setup(AccountRepositoryTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkDeletion -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkSave()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="checkSave" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null
-at repository.AccountRepositoryTest.setup(AccountRepositoryTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSave -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="checkfindByAccountNumber()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="checkfindByAccountNumber" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null
-at repository.AccountRepositoryTest.setup(AccountRepositoryTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkfindByAccountNumber -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="getAllAccounts()[pri:0, instance:repository.AccountRepositoryTest@692f203f]" started-at="2025-10-05T03:24:43 IST" name="getAllAccounts" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "repository.AccountRepository.clear()" because "this.accountrepo" is null
-at repository.AccountRepositoryTest.setup(AccountRepositoryTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllAccounts -->
-      </class> <!-- repository.AccountRepositoryTest -->
-      <class name="service.AccountServiceTest">
-        <test-method is-config="true" signature="classSetup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="classSetup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classSetup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="addAccount()[pri:1, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="addAccount" finished-at="2025-10-05T03:24:43 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addAccount -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="getBalance()[pri:2, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="getBalance" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.AccountServiceTest.addAccount" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBalance -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="deleteAccount()[pri:3, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="deleteAccount" finished-at="2025-10-05T03:24:43 IST" depends-on-methods="service.AccountServiceTest.addAccount" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAccount -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="getAllAccounts()[pri:4, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="getAllAccounts" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllAccounts -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method signature="checkAccountNotFoundException()[pri:5, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="checkAccountNotFoundException" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <exception class="exception.AccountNotFoundException">
-            <message>
-              <![CDATA[Destination account not found]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[exception.AccountNotFoundException: Destination account not found
-at service.TransactionService.transfer(TransactionService.java:67)
-at service.AccountServiceTest.checkAccountNotFoundException(AccountServiceTest.java:87)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- exception.AccountNotFoundException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkAccountNotFoundException -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="setup" finished-at="2025-10-05T03:24:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:service.AccountServiceTest@408d971b]" started-at="2025-10-05T03:24:43 IST" name="cleanup" finished-at="2025-10-05T03:24:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-      </class> <!-- service.AccountServiceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

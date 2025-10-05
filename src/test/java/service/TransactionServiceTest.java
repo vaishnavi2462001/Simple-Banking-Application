@@ -70,8 +70,10 @@ public class TransactionServiceTest {
 
 		transervice.transfer(account1, account2, new BigDecimal("10.08"));
 
-		//Assert.assertEquals(account1.getBalance(), expectedacc1balance, "Sender balance after transfer is incorrect");
-		Assert.assertTrue(account1.getBalance().compareTo(expectedacc1balance) == 0, "Sender balance after transfer is incorrect");
+		// Assert.assertEquals(account1.getBalance(), expectedacc1balance, "Sender
+		// balance after transfer is incorrect");
+		Assert.assertTrue(account1.getBalance().compareTo(expectedacc1balance) == 0,
+				"Sender balance after transfer is incorrect");
 
 		Assert.assertEquals(account2.getBalance(), expectedacc2balance, "Receiver balance after transfer is incorrect");
 	}
@@ -126,23 +128,33 @@ public class TransactionServiceTest {
 	}
 
 	@Test(dataProvider = "withdrawamounts", priority = 5, dependsOnMethods = { "checkwithdraw" })
-	public void checkwithdrawUsingDP(BigDecimal amount, boolean customException)
-			throws InsufficientFundsException, AccountNotFoundException {
+	public void checkwithdrawUsingDP(BigDecimal amount, boolean customInvalidAmtException,
+			boolean customInsufficientFundException)
+			throws InsufficientFundsException, InvalidAmountException, AccountNotFoundException {
 		Account account = new Account(data.getCustomerId(), new BigDecimal("200.00"), Account.AccountType.SAVINGS);
 		accountrepo.save(account);
 
 		try {
 			transervice.withdraw(account.getAccountNumber(), amount);
-			if (customException) {
+			if (customInvalidAmtException) {
 				Assert.fail("Expected InvalidAmountException for withdrawal amount: " + amount);
+			}
+			if (customInsufficientFundException) {
+				Assert.fail("Expected InsufficientFundsException for withdrawal amount: " + amount);
 			}
 			BigDecimal expectedBalance = new BigDecimal("200.00").subtract(amount);
 			Assert.assertEquals(account.getBalance(), expectedBalance, "Balance after withdrawal is incorrect");
 		} catch (InvalidAmountException e) {
-			if (!customException) {
+			if (!customInvalidAmtException) {
 				Assert.fail("Did not expect InvalidAmountException for amount: " + amount);
 			}
 			Assert.assertTrue(e.getMessage().contains("Invalid"), "Unexpected exception message: " + e.getMessage());
+		} catch (InsufficientFundsException e) {
+			if (!customInsufficientFundException) {
+				Assert.fail("Did not expect InsufficientFundsException for amount: " + amount);
+			}
+			Assert.assertTrue(e.getMessage().contains("Insufficient Funds"),
+					"Unexpected exception message: " + e.getMessage());
 		}
 	}
 
@@ -173,29 +185,14 @@ public class TransactionServiceTest {
 					"Unexpected exception message: " + e.getMessage());
 		}
 	}
-	
-	
-	 @Test(expectedExceptions = InvalidAmountException.class, dependsOnMethods = { "checkDeposit" })
-	    public void checkSameAccountTransfer()
-	            throws AccountNotFoundException, InsufficientFundsException, InvalidAmountException {
-	        Account account = new Account(data.getCustomerId(), new BigDecimal("1000.00"), Account.AccountType.SAVINGS);
-	        accountrepo.save(account);
-	        transervice.transfer(account, account, new BigDecimal("100.00"));
-	 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	@Test(expectedExceptions = InvalidAmountException.class, dependsOnMethods = { "checkDeposit" })
+	public void checkSameAccountTransfer()
+			throws AccountNotFoundException, InsufficientFundsException, InvalidAmountException {
+		Account account = new Account(data.getCustomerId(), new BigDecimal("1000.00"), Account.AccountType.SAVINGS);
+		accountrepo.save(account);
+		transervice.transfer(account, account, new BigDecimal("100.00"));
+	}
 
 	@AfterMethod
 	public void cleanup() {
@@ -206,39 +203,35 @@ public class TransactionServiceTest {
 
 	@DataProvider(name = "depositamounts")
 	public Object[][] depositAmounts() {
-	    return new Object[][] {
-	        { new BigDecimal("100.00"), false },   // valid deposit
-	        { new BigDecimal("0.00"), true },      // zero amount - expect exception
-	        { new BigDecimal("-50.00"), true },    // negative amount - expect exception
-	        { new BigDecimal("999999999999999999.99"), false }, // large valid deposit
-	        { new BigDecimal("0.01"), false },     // smallest positive deposit
-	        { new BigDecimal("0.0000000001"), false } // very small positive deposit
-	    };
-	}
-	
-	@DataProvider(name = "withdrawamounts")
-	public Object[][] withdrawAmounts() {
-	    return new Object[][] {
-	        { new BigDecimal("50.00"), false },   // valid withdraw
-	        { new BigDecimal("0.01"), false },    // smallest positive
-	        { new BigDecimal("0.00"), true },     // zero - invalid
-	        { new BigDecimal("-20.00"), true },   // negative - invalid
-	        { new BigDecimal("999999999999999999.99"), true }, // large amount exceeding balance
-	        { new BigDecimal("100.00"), false }   // exact balance if initial balance is 100
-	    };
-	}
-	
-	@DataProvider(name = "transferamounts")
-	public Object[][] transferAmounts() {
-	    return new Object[][] {
-	        { new BigDecimal("100.00"), false },  // valid transfer within balance
-	        { new BigDecimal("0.01"), false },    // smallest positive transfer
-	        { new BigDecimal("0.00"), true },     // zero transfer - expect exception
-	        { new BigDecimal("-50.00"), true },   // negative transfer - expect exception
-	        { new BigDecimal("999999999999999999.99"), true }, // large transfer expected to fail
-	        { new BigDecimal("50.00"), false }    // valid transfer
-	    };
+		return new Object[][] { { new BigDecimal("100.00"), false }, // valid deposit
+				{ new BigDecimal("0.00"), true }, // zero amount - expect exception
+				{ new BigDecimal("-50.00"), true }, // negative amount - expect exception
+				{ new BigDecimal("999999999999999999.99"), false }, // large valid deposit
+				{ new BigDecimal("0.01"), false }, // smallest positive deposit
+				{ new BigDecimal("0.0000000001"), false } // very small positive deposit
+		};
 	}
 
+	@DataProvider(name = "withdrawamounts")
+	public Object[][] withdrawAmounts() {
+		return new Object[][] { { new BigDecimal("50.00"), false, false }, // valid withdraw
+				{ new BigDecimal("0.01"), false, false }, // smallest positive
+				{ new BigDecimal("0.00"), true, false }, // zero - invalid
+				{ new BigDecimal("-20.00"), true, false }, // negative - invalid
+				{ new BigDecimal("999999999999999999.99"), false, true }, // large amount exceeding balance
+				{ new BigDecimal("200.00"), false, false } // exact balance if initial balance is 100
+		};
+	}
+
+	@DataProvider(name = "transferamounts")
+	public Object[][] transferAmounts() {
+		return new Object[][] { { new BigDecimal("100.00"), false }, // valid transfer within balance
+				{ new BigDecimal("0.01"), false }, // smallest positive transfer
+				{ new BigDecimal("0.00"), true }, // zero transfer - expect exception
+				{ new BigDecimal("-50.00"), true }, // negative transfer - expect exception
+				{ new BigDecimal("999999999999999999.99"), true }, // large transfer expected to fail
+				{ new BigDecimal("50.00"), false } // valid transfer
+		};
+	}
 
 }
